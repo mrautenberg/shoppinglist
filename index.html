@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/5bbf6a7a61.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Shopping list</title>
+  </head>
+  <body>
+    <header>
+    <h1>Shopping list</h1>
+    <p>
+      This is just a simple shopping list application where you can add, change
+      and remove your items. <br />
+      Both talking and typing is possible when adding new items, fingers crossed that the voice API understands you :) <br />
+      You can either store the list with your google account or in local
+      storage. <br />
+      Enjoy! <br />
+    </header>
+    <main>
+      <label for="add">Add item</label>
+      <input id="add" type="text" />
+      <button class="add-btn">Add</button>
+      <label for="text">Added item</label>
+      <input id="text" type="text" />
+      <button class="change-btn">Change</button>
+      <button class="remove-btn">Remove</button>
+
+      <br />
+    </p>
+    <!-- Add name instead of my! -->
+    <h2>My shopping list</h2>
+    <hr />
+    <p>Show items here!</p>
+    <br />
+    <hr />
+    <p>pagination would be nice</p>
+  </main>
+    <footer>
+      <p>Max Rautenberg</p>
+      <i class="fab fa-github"></i>
+      <i class="fas fa-envelope"></i>
+    </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyChaTPb6_dYO-H0rkYyujJJwr7hrP5t8CM',
+        authDomain: 'shoppinglist-6a143.firebaseapp.com',
+        databaseURL: 'https://shoppinglist-6a143.firebaseio.com',
+        projectId: 'shoppinglist-6a143',
+        storageBucket: 'shoppinglist-6a143.appspot.com',
+        messagingSenderId: '587518596842',
+        appId: '1:587518596842:web:f398535622a0c18f892993',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
