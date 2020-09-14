@@ -8,60 +8,57 @@
 }
 
 html {
-  font-family: 'Fira Mono', monospace;
   font-size: 62.5%;
+  font-family: 'Fira Mono', monospace;
+  --text: calc(1rem + 0.5vw);
+  --special-color: rgb(137, 11, 211);
 }
+
+.flex-container {
+  display: flex;
+}
+
 /* HEADER */
-header {
+.main-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  max-height: 10%;
   border-bottom: 1px solid #333;
-  margin-bottom: 1rem;
+  top: 0rem;
 }
 
-.header-large {
+.wrapper {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  min-height: 10vh;
+  align-items: center;
+}
+
+header.wrapper {
+  min-height: 10vh;
+}
+
+.logo {
+  flex: 3 1 40rem;
+  font-size: 1.8rem;
+}
+
+ul.links {
+  display: flex;
   font-size: 2rem;
-}
-
-.topnav {
-  display: flex;
-  flex: 3 1 5rem;
-  width: 90%;
+  flex: 1 1 20rem;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-}
-
-.topnav ul {
-  display: flex;
   list-style: none;
-  /* align-items: center; */
-  justify-content: space-around;
-  flex: auto;
-}
-/* MAIN */
-
-.main {
-  display: flex;
-  justify-content: center;
-  text-align: center;
   align-items: center;
-  flex-direction: column;
-  max-height: 80%;
 }
 
-.main-content {
-  width: 90%;
+ul li a {
+  text-decoration: none;
+  color: var(--special-color);
 }
 
-p {
-  padding: 1rem 0rem;
-  line-height: 1.3rem;
-}
-
+/* BUTTONS */
 button {
   font-family: 'Fira Mono', monospace;
   display: block;
@@ -81,26 +78,47 @@ button.remove-btn {
   background-color: red;
 }
 
+/* MAIN */
+.main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: 80%;
+}
+
+.main-content {
+  width: 90%;
+}
+
+p {
+  padding: 1rem 0rem;
+  line-height: 2.5rem;
+  font-size: var(--text);
+}
+
 input {
   font-family: 'Fira Mono';
 }
 
-footer {
+.todo li {
+  font-size: var(--text);
+}
+
+/* FOOTER */
+.main-footer {
   position: absolute;
   width: 100%;
-  min-height: 10vh;
   border-top: 1px solid #333;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   bottom: 0;
   left: 0;
 }
 
-footer a {
-  background-color: #fff;
+header.wrapper {
+  min-height: 10vh;
 }
 
-footer a:active {
-  background-color: #fff;
+footer ul .links {
+  justify-content: space-around;
 }

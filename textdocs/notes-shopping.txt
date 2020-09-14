@@ -1,0 +1,4 @@
+kanske övergjort nav med för många properties!
+använd space-between och sen avstånd mellan enskilda list-element
+
+navbar + footer inspirerad av DevEd!

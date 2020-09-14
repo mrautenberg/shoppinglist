@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shoppinglist is the best shopping list ever created (by me, there's plenty of better shoppings lists out there!)"
+    />
+    <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/5bbf6a7a61.js"
@@ -11,30 +16,28 @@
     <title>Shopping list</title>
   </head>
   <body>
-    <header>
-      <div class="topnav">
-        <h1 class="header-large">Shopping list</h1>
-        <ul>
-          <li><i class="fab fa-google"></i></li>
-          <li>menu</li>
+    <header class="main-header">
+      <nav class="wrapper">
+        <div class="logo">
+          <h1 class="header-large">Shopping list</h1>
+        </div>
+        <ul class="links">
+          <li><a href="#"></a><i class="fab fa-google"></i></li>
+          <!-- add tooltip! -->
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
-      </div>
+      </nav>
     </header>
+
     <main class="main">
       <div class="main-content">
-        <p>
-          This is just a simple shopping list application where you can add,
-          change and remove your items. <br />
-          Both talking and typing is possible when adding new items, fingers
-          crossed that the voice API understands you :) <br />
-          You can either store the list with your google account or in local
-          storage. <br />
-          Enjoy! <br />
-        </p>
+        <!-- Some sort of remove all function! -->
         <div class="add-item">
           <label for="add">Add item</label>
           <input id="add" type="text" />
           <button class="add-btn"><i class="fas fa-plus-square"></i></button>
+          <button class="talk-button"><i class="fas fa-microphone"></i></button>
         </div>
 
         <br />
@@ -43,22 +46,35 @@
         <h2 class="header-large">My shopping list</h2>
         <hr />
         <p>Show items here!</p>
-        <label for="text">Added item</label>
-        <input id="text" type="text" />
-        <button class="change-btn">Change</button>
-        <button class="remove-btn">Remove</button>
+        <div class="todo-container">
+          <ul class="todo-list">
+            <div class="todo">
+              <li>Added item1</li>
+              <button class="change-btn">Change</button>
+              <button class="remove-btn">Remove</button>
+            </div>
+          </ul>
+        </div>
         <br />
         <hr />
         <p>pagination would be nice</p>
       </div>
     </main>
 
-    <footer>
-      <h4 class="header-large">Max Rautenberg</h4>
-      <a href="https://github.com/mrautenberg"
-        ><i class="fab fa-github fa-2x"></i
-      ></a>
-      <a href="gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+    <footer class="main-footer">
+      <div class="wrapper">
+        <h4 class="logo">Max Rautenberg &copy; 2020</h4>
+        <ul class="links">
+          <li>
+            <a href="https://github.com/mrautenberg"
+              ><i class="fab fa-github fa-2x"></i
+            ></a>
+          </li>
+          <li>
+            <a href="gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+          </li>
+        </ul>
+      </div>
     </footer>
 
     <script src="./app.js"></script>
