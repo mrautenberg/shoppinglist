@@ -4,22 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/5bbf6a7a61.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/5bbf6a7a61.js" crossorigin="anonymous"></script>
     <title>About page</title>
   </head>
   <body>
-    <h1>About!</h1>
-    <p>
-      This is just a simple shopping list application where you can add, change
-      and remove your items. <br />
-      Both talking and typing is possible when adding new items, fingers crossed
-      that the voice API understands you :) <br />
-      You can either store the list with your google account or in local
-      storage. <br />
-      Enjoy! <br />
-    </p>
+    <header>
+      <nav class="topnav">
+        <div class="logo">
+          <a href="./index.html"><h4>LOGO</h4></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Login</a></li>
+          <li><a href="#">My Lists</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="about-section">
+      <h1>About the project</h1>
+      <p>
+        This is a simple shopping list done for educational purposes. <br />
+        My plan is to make it possible to add items both by typing, speech and scanning a hand
+        written list. <br />
+        The shopping list is only stored in local storage for now, but I plan to make it possible to
+        save and share shopping lists with a google account. <br />
+        The shopping list is a work in progress, with many features yet to be done :) <br />
+        Check out my GITHUB to see more of my projects. <br />
+        Enjoy! <br />
+      </p>
+    </div>
+
+    <script src="./script/navbar.js"></script>
+    <script src="./script/no-window-resize.js"></script>
   </body>
 </html>

@@ -10,55 +10,73 @@
 html {
   font-size: 62.5%;
   font-family: 'Fira Mono', monospace;
+  /* COLORS NEED TO BE ADDED */
   --text: calc(1rem + 0.5vw);
-  --special-color: rgb(137, 11, 211);
+  --nav-color: #613a6d;
+  --slider-color: #683d75;
+  --link-color: rgb(245, 243, 243);
+  /* --link-color: rgb(41, 39, 39); */
 }
 
-.flex-container {
-  display: flex;
+/* Stop animations when resizing window */
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
 }
 
-/* HEADER */
-.main-header {
+.topnav {
   display: flex;
-  border-bottom: 1px solid #333;
-  top: 0rem;
-}
-
-.wrapper {
-  display: flex;
-  width: 90%;
-  margin: auto;
-  padding: 1rem;
-  min-height: 10vh;
+  justify-content: space-around;
   align-items: center;
-}
-
-header.wrapper {
   min-height: 10vh;
+  background-color: var(--nav-color);
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 
 .logo {
-  flex: 3 1 40rem;
-  font-size: 1.8rem;
-}
-
-ul.links {
-  display: flex;
+  color: #000;
+  letter-spacing: 0.1rem;
   font-size: 2rem;
-  flex: 1 1 20rem;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+}
+
+.nav-links li {
   list-style: none;
-  align-items: center;
 }
 
-ul li a {
+.nav-links a {
+  color: var(--link-color);
   text-decoration: none;
-  color: var(--special-color);
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-/* BUTTONS */
+/* @TODO text-hover! */
+
+.burger {
+  /* show in media queries! */
+  display: none;
+}
+
+.burger div {
+  background-color: var(--link-color);
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Main Page */
+
+/* Buttons
 button {
   font-family: 'Fira Mono', monospace;
   display: block;
@@ -78,9 +96,9 @@ button.remove-btn {
   background-color: red;
 }
 
-/* MAIN */
-.main {
-  display: flex;
+/* Main section */
+/* .main {
+  display: none;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -104,21 +122,117 @@ input {
 
 .todo li {
   font-size: var(--text);
+} */
+
+/* Footer */
+footer {
+  background-color: var(--nav-color);
+  color: var(--link-color);
 }
 
-/* FOOTER */
-.main-footer {
-  position: absolute;
+.footer-wrapper {
+  display: flex;
+  min-height: 8vh;
+}
+
+.footer-wrapper .author {
+  font-size: 2rem;
+}
+
+.footer-wrapper ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
   width: 100%;
-  border-top: 1px solid #333;
-  bottom: 0;
-  left: 0;
 }
 
-header.wrapper {
-  min-height: 10vh;
+.footer-links a {
+  font-size: 150%;
+  color: var(--link-color);
+  padding: 0rem 3rem;
 }
 
-footer ul .links {
-  justify-content: space-around;
+/* About */
+/* .about-section {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+} */
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-left: 8rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 89.9vh;
+    top: 10.1vh;
+    background-color: var(--slider-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    margin-right: 2rem;
+  }
+
+  .footer-wrapper .author {
+    font-size: 1.4rem;
+  }
+
+  .footer-links a {
+    font-size: 120%;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
