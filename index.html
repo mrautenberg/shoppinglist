@@ -9,7 +9,6 @@
     />
     <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="./style.css" />
-    <!-- <link rel="stylesheet" href="./navbar.css" /> -->
     <script src="https://kit.fontawesome.com/5bbf6a7a61.js" crossorigin="anonymous"></script>
     <title>Shopping list</title>
   </head>
@@ -36,31 +35,28 @@
     <main class="main">
       <div class="main-content">
         <!-- Some sort of remove all function! -->
-        <div class="add-item">
-          <label for="add">Add item</label>
-          <input id="add" type="text" />
-          <button class="add-btn"><i class="fas fa-plus-square"></i></button>
-          <button class="talk-button"><i class="fas fa-microphone"></i></button>
-        </div>
-
-        <br />
-
         <!-- Add name instead of my! -->
-        <h2 class="header-large">My shopping list</h2>
-        <hr />
-        <p>Show items here!</p>
-        <div class="todo-container">
-          <ul class="todo-list">
-            <div class="todo">
-              <li>Added item1</li>
-              <button class="change-btn">Change</button>
-              <button class="remove-btn">Remove</button>
-            </div>
-          </ul>
-        </div>
-        <br />
-        <hr />
-        <p>pagination would be nice</p>
+        <h2 class="header-large">Add Item</h2>
+        <form>
+          <input type="text" class="todo-input" />
+          <button class="todo-button text-btn" type="submit">
+            <i class="fas fa-plus-square"></i>
+          </button>
+          <!-- <button class="todo-button speech-btn">
+            <i class="fas fa-microphone"></i>
+          </button> -->
+        </form>
+      </div>
+
+      <div class="todo-container">
+        <ul class="todo-list">
+          <!-- generated dynamically! 
+          <div class="todo">
+            <li></li>
+            <button>delete</button>
+            <button>checked</button>
+          </div> -->
+        </ul>
       </div>
     </main>
 
@@ -81,7 +77,7 @@
       </div>
     </footer>
 
-    <script src="./script/app.js"></script>
+    <script src="./script/add-todo.js"></script>
     <script src="./script/navbar.js"></script>
     <script src="./script/no-window-resize.js"></script>
   </body>

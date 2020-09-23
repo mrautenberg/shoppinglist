@@ -27,8 +27,49 @@
       </nav>
     </header>
 
-    <h1>Contact</h1>
+    <div class="container">
+      <div class="form-container">
+        <form id="form" class="form">
+          <h2>Get in touch/feedback</h2>
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter name" />
+            <small>Error messege</small>
+          </div>
+          <div class="form-control">
+            <!-- Input kept as text for the custom validation -->
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Enter email" />
+            <small>Error messege</small>
+          </div>
+          <div class="form-control">
+            <label for="textarea">Messege</label>
+            <textarea name="messege" id="messege" cols="30" rows="10"></textarea>
+            <small>Error messege</small>
+          </div>
+          <button class="submit">Submit</button>
+        </form>
+      </div>
+    </div>
 
+    <!-- Footer -->
+    <footer>
+      <div class="footer-wrapper">
+        <ul class="footer-links">
+          <li>
+            <h5 class="author">Max Rautenberg</h5>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-linkedin-in fa-2x"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="./script/form-validation.js"></script>
     <script src="./script/navbar.js"></script>
     <script src="./script/no-window-resize.js"></script>
   </body>
