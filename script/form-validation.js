@@ -8,7 +8,7 @@ const messege = document.querySelector("#messege");
 // err mssg for input
 function showError(input, messege) {
   const formControl = input.parentElement;
-  formControl.className = "form-control error";
+  formControl.className = "form__control error";
 
   // select the small tag to manipulate
   const small = formControl.querySelector("small");
@@ -18,7 +18,7 @@ function showError(input, messege) {
 // show success outline
 function showSuccess(input) {
   const formControl = input.parentElement;
-  formControl.className = "form-control success";
+  formControl.className = "form__control success";
 }
 
 // check email is valid

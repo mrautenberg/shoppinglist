@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Shoppinglist is the best shopping list ever created (by me, there's plenty of better shoppings lists out there!)"
+      content="Listig is the best shopping list ever created (by me, there's plenty of better shoppings lists out there!)"
     />
     <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="./style.css" />
@@ -14,13 +14,12 @@
   </head>
   <body class="resize-animation-stopper">
     <header>
-      <nav class="topnav">
-        <div class="logo">
+      <nav class="navbar">
+        <div class="navbar__logo">
           <a href="./index.html"><h4>LOGO</h4></a>
         </div>
-        <ul class="nav-links">
-          <li><a href="#">Login</a></li>
-          <li><a href="#">My Lists</a></li>
+        <ul class="navbar__links">
+          <li><a href="./index.html">My Lists</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
@@ -32,48 +31,34 @@
       </nav>
     </header>
 
-    <main class="main">
-      <div class="main-content">
-        <!-- Some sort of remove all function! -->
-        <!-- Add name instead of my! -->
-        <h2 class="header-large">Add Item</h2>
-        <form>
-          <input type="text" class="todo-input" />
-          <button class="todo-button text-btn" type="submit">
-            <i class="fas fa-plus-square"></i>
-          </button>
-          <!-- <button class="todo-button speech-btn">
-            <i class="fas fa-microphone"></i>
-          </button> -->
-        </form>
-      </div>
+    <h1>Listig - den smarta Todo-listan</h1>
+    <form class="add__todo">
+      <input type="text" class="todo-input" />
+      <button class="todo-button" type="submit">
+        <i class="fas fa-plus-square"> </i>
+      </button>
+    </form>
 
-      <div class="todo-container">
-        <ul class="todo-list">
-          <!-- generated dynamically! 
-          <div class="todo">
-            <li></li>
-            <button>delete</button>
-            <button>checked</button>
-          </div> -->
-        </ul>
-      </div>
-    </main>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
 
     <!-- Footer -->
     <footer>
-      <div class="footer-wrapper">
-        <ul class="footer-links">
-          <li>
-            <h5 class="author">Max Rautenberg</h5>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-github fa-2x"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-linkedin-in fa-2x"></i></a>
-          </li>
-        </ul>
+      <div class="container">
+        <div class="footer__container">
+          <ul class="footer__links">
+            <li class="footer__author">
+              <h5>Max Rautenberg</h5>
+            </li>
+            <li class="social__icon">
+              <a href=""><i class="fab fa-github fa-2x"></i></a>
+            </li>
+            <li class="social__icon">
+              <a href=""><i class="fab fa-github fa-2x"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
 

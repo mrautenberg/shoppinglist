@@ -3,52 +3,117 @@ const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 
-// Event Listeners
+// Event listeners
+document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteTodo);
 
 // Functions
 function addTodo(e) {
+  // Prevent form from submitting
   e.preventDefault();
 
-  // Generate Todo (which shall contain li, check, trash btn)
+  // Todo div (which shall contain li, check and trash btn)
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
 
-  // Generate li
+  // Create li
   const newTodo = document.createElement("li");
-  // assign the new todo the value of the input
   newTodo.innerText = todoInput.value;
-  // add classlist with styling
   newTodo.classList.add("todo-item");
-  // add new todo as a child of the todo div, a new li within the todo div
+  // add newTodo as a child of the todoDiv, a li within the div
   todoDiv.appendChild(newTodo);
 
-  // Trash Button
+  // Add todo to LS
+  saveLocalTodos(todoInput.value);
+
+  // Trash button
   const trashButton = document.createElement("button");
   trashButton.innerHTML = '<i class="fas fa-trash"></i>';
   trashButton.classList.add("trash-btn");
-  // add trashbutton to todo div
+  // add trashButton as a child of the todoDiv, a button within the div
   todoDiv.appendChild(trashButton);
 
-  // Append Todo To List
+  // Append todo to list to list
   todoList.appendChild(todoDiv);
 
   // Clear Todo Input Value
   todoInput.value = "";
 }
 
-// Delete and Check Todo
 function deleteTodo(e) {
-  // Create item of the event object, i.e. what we click on
   const item = e.target;
 
   // Delete todo
   if (item.classList[0] === "trash-btn") {
-    // We remove the todo by removing the parent element of the btn
+    // We remove it by removing the parent element of the btn
     const todo = item.parentElement;
-
     // Animation
-    todo.remove();
+    todo.classList.add("fall");
+
+    // Remove local todo
+    removeLocalTodos(todo);
+
+    // event listener to prospone remove until animaition finished
+    addEventListener("transitionend", function () {
+      todo.remove();
+    });
   }
+}
+
+function saveLocalTodos(todo) {
+  // check -- if things already there
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  todos.push(todo);
+  localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+function getTodos() {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+
+  todos.forEach(function (todo) {
+    // Todo div (which shall contain li, check and trash btn)
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
+
+    // Create li
+    const newTodo = document.createElement("li");
+    newTodo.innerText = todo;
+    newTodo.classList.add("todo-item");
+    // add newTodo as a child of the todoDiv, a li within the div
+    todoDiv.appendChild(newTodo);
+
+    // Trash button
+    const trashButton = document.createElement("button");
+    trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+    trashButton.classList.add("trash-btn");
+    // add trashButton as a child of the todoDiv, a button within the div
+    todoDiv.appendChild(trashButton);
+
+    // Append todo to list to list
+    todoList.appendChild(todoDiv);
+  });
+}
+
+function removeLocalTodos(todo) {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  const todoIndex = todo.children[0].innerText;
+  // what element to remove and how many
+  todos.splice(todos.indexOf(todoIndex), 1);
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
