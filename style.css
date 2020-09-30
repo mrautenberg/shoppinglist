@@ -33,10 +33,10 @@ body {
 
 /* Stop animations when resizing window */
 /* Seems not to stop other animations too? */
-/* .resize-animation-stopper * {
+.resize-animation-stopper * {
     animation: none !important;
     transition: none !important;
-} */
+}
 
 /* NAVBAR */
 .navbar {
