@@ -4,7 +4,7 @@
   /* Text and color vars */
   --background-color: rgb(136, 83, 164),
     linear-gradient(90deg, rgba(136, 83, 164, 1) 24%, rgba(136, 70, 122, 1) 90%);
-  --slider-color: rgb(104, 65, 126);
+  --slider-color: rgba(136, 70, 122, 1);
   --link-color: rgb(245, 243, 243);
   --hover-color: rgb(243, 134, 10);
 
@@ -31,13 +31,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Stop animations when resizing window */
-/* Seems not to stop other animations too? */
-.resize-animation-stopper * {
-  animation: none !important;
-  transition: none !important;
-}
-
 /* NAVBAR */
 .navbar {
   display: flex;
@@ -53,6 +46,14 @@ body {
   color: #000;
   letter-spacing: 0.1rem;
   font-size: 2rem;
+}
+
+.navbar h2 {
+  font-size: 2rem;
+}
+
+.fa-pen-alt {
+  color: #fff;
 }
 
 .navbar__links {
@@ -237,10 +238,20 @@ form.add__todo button:hover {
 /* Media queries Todo-section */
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 1.8em;
+    font-size: 2em;
+    text-align: center;
+    margin: 0rem 2rem;
   }
   .todo-list {
-    width: 65%;
+    width: 70%;
+  }
+  
+  .add__todo input {
+    max-width: 80%;
+  }
+  
+  .navbar__logo {
+    margin-left: 2rem;
   }
 }
 /* ABOUT PAGE */
@@ -277,9 +288,6 @@ form.add__todo button:hover {
   font-weight: bold;
 }
 
-.about__container {
-  margin: 2rem;
-}
 
 .form__control {
   margin-bottom: 10px;
@@ -376,4 +384,37 @@ form button:hover {
 
 .link__item.active {
   color: var(--hover-color);
+}
+
+/* SUBMIT PAGE */
+
+
+.submit-header {
+  font-size: 3rem;
+}
+
+.index-btn {
+  margin: 5em 0;
+  padding: 2em;
+  text-align: center;
+  text-decoration: none;
+  background: yellow;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.index-btn:hover {
+  background: #d5eb34;
+}
+
+.form-submit {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form submit media queries */
+@media screen and (max-width: 768px) {
+  .submit-header {
+    font-size: 2.4rem; 
+  } 
 }

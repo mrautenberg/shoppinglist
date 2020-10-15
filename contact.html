@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/5bbf6a7a61.js" crossorigin="anonymous"></script>
-    <title>Contact page</title>
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="navbar__logo">
-          <a href="./index.html">
-            <h4>LOGO</h4>
-          </a>
-        </div>
-        <ul class="navbar__links">
-          <li><a class="link__item" href="./index.html">My Lists</a></li>
-          <li><a class="link__item" href="./about.html">About</a></li>
-          <li><a class="link__item active" href="./contact.html">Contact</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/5bbf6a7a61.js" crossorigin="anonymous"></script>
+  <title>Contact page</title>
+</head>
 
-    <div class="container">
-      <div class="form__container">
-        <form id="form" class="form">
-          <h1 class="container__header">Get in touch/feedback</h1>
-          <div class="form__control">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Enter name" />
-            <small aria-live="polite">Error messege</small>
-          </div>
-          <div class="form__control">
-            <!-- Input kept as text for the custom validation -->
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="Enter email" />
-            <small aria-live="polite">Error messege</small>
-          </div>
-          <div class="form__control">
-            <label for="textarea">Messege</label>
-            <textarea name="messege" id="messege" cols="30" rows="10"></textarea>
-            <small aria-live="polite">Error messege</small>
-          </div>
-          <button class="submit">Submit</button>
-        </form>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <a href="./index.html">
+          <h2><i class="fas fa-pen-alt"></i></h2>
+        </a>
       </div>
-    </div>
+      <ul class="navbar__links">
+        <li><a class="link__item" href="./index.html">My Lists</a></li>
+        <li><a class="link__item" href="./about.html">About</a></li>
+        <li><a class="link__item active" href="./contact.html">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
 
-    <script src="./script/form-validation.js"></script>
-    <script src="./script/navbar.js"></script>
-    <script src="./script/no-window-resize.js"></script>
-  </body>
+  <div class="container">
+    <div class="form__container">
+      <form id="form" class="form">
+        <h1 class="container__header">Get in touch/feedback</h1>
+        <div class="form__control">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter name" tabindex="1" />
+          <small aria-live="polite">Error messege</small>
+        </div>
+        <div class="form__control">
+          <!-- Input kept as text for the custom validation -->
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" placeholder="Enter email" tabindex="2" />
+          <small aria-live="polite">Error messege</small>
+        </div>
+        <div class="form__control">
+          <label for="textarea">Messege</label>
+          <textarea name="messege" id="messege" cols="30" rows="10" tabindex="3"></textarea>
+          <small aria-live="polite">Error messege</small>
+        </div>
+        <button class="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./script/form-validation.js"></script>
+  <script src="./script/navbar.js"></script>
+</body>
+
 </html>

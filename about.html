@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/5bbf6a7a61.js" crossorigin="anonymous"></script>
-    <title>About page</title>
-  </head>
-  <body class="resize-animation-stopper">
-    <header>
-      <nav class="navbar">
-        <div class="navbar__logo">
-          <a href="./index.html"><h4>LOGO</h4></a>
-        </div>
-        <ul class="navbar__links">
-          <li><a class="link__item" href="./index.html">My Lists</a></li>
-          <li><a class="link__item active" href="./about.html">About</a></li>
-          <li><a class="link__item" href="./contact.html">Contact</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    </header>
 
-    <div class="container">
-      <div class="about__container">
-        <h1 class="about__header">About the project</h1>
-        <p class="about__text">This is a simple shopping list created for educational purposes.</p>
-        <p class="about__text">
-          My idea is to make it possible to add items by typing, speech and scanning a hand written
-          list. The first step is to make it possible to store the shopping list in local storage,
-          and the a lateradd functionality to save and share shopping lists with your google
-          account.
-        </p>
-        <p class="about__text">
-          The shopping list is a work in progress, with many features yet to be done :) Check out my
-          <span> <a class="about__github" href="https://github.com/mrautenberg"> GITHUB </a></span>
-          to see more of my projects. Enjoy!
-        </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name=”description”
+    content="Listig is the smart todo-list application that allows you to add and store todos in various ways.">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/5bbf6a7a61.js" crossorigin="anonymous"></script>
+  <title>About Listig</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <a href="./index.html">
+          <h2><i class="fas fa-pen-alt"></i></h2>
+        </a>
       </div>
-    </div>
+      <ul class="navbar__links">
+        <li><a class="link__item" href="./index.html">My Lists</a></li>
+        <li><a class="link__item active" href="./about.html">About</a></li>
+        <li><a class="link__item" href="./contact.html">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
 
-    <script src="./script/navbar.js"></script>
-    <script src="./script/no-window-resize.js"></script>
-  </body>
+  <div class="container">
+    <div class="about__container">
+      <h1 class="about__header">About the project</h1>
+      <p class="about__text">This is a simple shopping list created for educational purposes.</p>
+      <p class="about__text">
+        My idea is to make it possible to add items by typing, speech and scanning a hand written
+        list. The first step is to make it possible to store the shopping list in local storage,
+        and the a lateradd functionality to save and share shopping lists with your google
+        account.
+      </p>
+      <p class="about__text">
+        The shopping list is a work in progress, with many features yet to be done :) Check out my
+        <span> <a class="about__github" href="https://github.com/mrautenberg"> GITHUB </a></span>
+        to see more of my projects. Enjoy!
+      </p>
+    </div>
+  </div>
+
+  <script src="./script/navbar.js"></script>
+</body>
+
 </html>

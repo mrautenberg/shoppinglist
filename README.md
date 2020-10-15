@@ -6,7 +6,7 @@ The code is based upon tutorials and snippets which have been slightly modified 
 
 ## Code sources
 
-A huge thanks to Brad Traversy and Dev Ed for their great tutorials that have been the the reference for the Todo funcionality(DevEd - ), the navbar (DevEd - ), the contact form and validation (Brad Traversy) and the avoid animation when resizing (CSS tips).
+A huge thanks to Brad Traversy and Dev Ed for their great tutorials that have been the the reference for the Todo funcionality(DevEd - https://www.youtube.com/watch?v=Ttf3CEsEwMQ), the navbar (DevEd - https://www.youtube.com/watch?v=gXkqy0b4M5g), the contact form and validation (Brad Traversy https://www.udemy.com/course/web-projects-with-vanilla-javascript/) 
 
 ## Functionality that remains to be added
 
